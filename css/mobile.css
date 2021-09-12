@@ -31,7 +31,8 @@
 
   nav ul.show {
     background-color: var(--very-dark-violet);
-    display: flex;
+/*unless the menu button should be clicked the display of the menu should be none */
+    display: none;
     flex-direction: column;
     position: fixed;
     margin: 0;
@@ -40,6 +41,10 @@
     width: 100vw;
     height: calc(100vh - 4em);
     z-index: 100;
+  }
+/* after clicking the menu the ul should appear so display is set to flex or display can be set to block both will work fine   */
+  nav ul.show.disclose {
+    display:flex;
   }
 
   /* Changes the space between mobile links */
